@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/annae/Desktop/VisualStudioCodes/C_Codes",
-      "program": "c:/Users/annae/Desktop/VisualStudioCodes/C_Codes/build/Debug/outDebug",
+      "cwd": "c:/Users/annae/Desktop/VisualStudioCodes/C_Codes/Exercise1",
+      "program": "c:/Users/annae/Desktop/VisualStudioCodes/C_Codes/Exercise1/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "C:/MinGW/bin/gdb.exe",
       "setupCommands": [
