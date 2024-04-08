@@ -13,10 +13,10 @@ int main(void) {
     if (age < 13) {
         printf("Child");}
     
-    if (age >= 13 && age <= 19) {
+    else if (age >= 13 && age <= 19) {
         printf("Teenager");}
 
-    else; {
+    else {
         printf("Adult");}
 
    return 0;
