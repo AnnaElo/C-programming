@@ -5,19 +5,26 @@
 #include <stdio.h>
 
 int main(void) {
-    int age; 
+    int age;
 
-   printf("Please, input your age\n");
-   scanf("%d", &age);
+    printf("Please, input your age\n");
+
+    // Reading the value and determining is it in the correct form
+    while (scanf("%d", &age) != 1) {
+        fprintf(stderr, "Error: Your input needs to be in numerical value. Please try again.\n");
+        // Clear the input line for the next try
+        while (getchar() != '\n');
+    }
 
     if (age < 13) {
-        printf("Child");}
-    
-    else if (age >= 13 && age <= 19) {
-        printf("Teenager");}
+        printf("Child\n");
 
-    else {
-        printf("Adult");}
+    } else if (age >= 13 && age <= 19) {
+        printf("Teenager\n");
+        
+    } else {
+        printf("Adult\n");
+    }
 
-   return 0;
+    return 0; 
 }
