@@ -1,4 +1,4 @@
-// Task: Develop a program that asks the user for a number and then prints a menu for the user to choose from: 
+// Develop a program that asks the user for a number and then prints a menu for the user to choose from: 
 // 1) Add 5 to the number, 2) Multiply the number by 5, 3) Subtract 5 from the number, 0) Exit the program. 
 // Use a switch for menu selection and loop the menu until the user chooses to exit.
 
