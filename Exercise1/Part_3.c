@@ -5,14 +5,18 @@
 #include <stdio.h>
 
 int main() {
-    int number, choice;
+    int number, original_number, choice;
 
     // Asking the user for a number
     printf("Please enter a number: ");
     scanf("%d", &number);
 
+original_number = number;  // Store the original number that user gives
+
     // Menu loop
     do {
+        number = original_number; // Reset the number to its original value
+
         // Printing the menu
         printf("\nMenu:\n");
         printf("1) Add 5 to the number\n");
