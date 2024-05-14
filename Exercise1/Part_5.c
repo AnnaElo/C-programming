@@ -4,8 +4,6 @@
 
 #include <stdio.h>
 
-#define ARRAY_SIZE 10
-
 int main() {
     int numbers[10];
     int i;
@@ -13,7 +11,7 @@ int main() {
     printf("Please enter 10 positive numbers:\n");
 
     // Loop to input 10 numbers
-    for (i = 0; i < ARRAY_SIZE; i++) {
+    for (i = 0; i < 10; i++) {
         do {
             printf("Number %d: ", i + 1);
             scanf("%d", &numbers[i]);
@@ -25,7 +23,7 @@ int main() {
 
     // Displaying the entered numbers
     printf("\nThe numbers you entered are:\n");
-    for (int i = 0; i < ARRAY_SIZE; i++) {
+    for (int i = 0; i < 10; i++) {
         printf("%d ", numbers[i]);
     }
 
@@ -33,7 +31,7 @@ int main() {
      
     // Displaying the entered numbers in reverse order
     printf("\nThe numbers you entered in reversed order are:\n");
-    for (int i = ARRAY_SIZE - 1; i >= 0; i--) {
+    for (int i = 10 - 1; i >= 0; i--) {
         printf("%d ", numbers[i]);
     }
     printf("\n");
