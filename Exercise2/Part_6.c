@@ -6,7 +6,7 @@
 
 #define MAX_NAME_LENGTH 50
 
-// Define struct for student details
+// Defining student details
 struct Student {
     char name[MAX_NAME_LENGTH];
     int ID;
@@ -34,7 +34,7 @@ int main() {
         return 1;
     }
 
-    // Display student details
+    // Displaying the inputs
     printf("\nStudent Details:\n");
     printf("Name: %s", student.name);
     printf("ID: %d\n", student.ID);
