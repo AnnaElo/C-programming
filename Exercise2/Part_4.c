@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 
-// Define an enum type for the days of the week
+// Defining enum type for the days of the week
 enum DaysOfWeek {
     Monday = 1,
     Tuesday = 2,
@@ -18,7 +18,7 @@ int main() {
     int dayNumber;
 
     while (1) {
-        // Prompt the user to input a number between 1 and 7
+        // Asking user to insert number between 1 and 7
         printf("Enter a number between 1 and 7: ");
         if (scanf("%d", &dayNumber) != 1) {
             printf("Invalid input. Please enter a valid number.\n");
@@ -27,17 +27,14 @@ int main() {
             continue;
         }
 
-        // Check if input is within valid range
+        // Checking if input is within valid range
         if (dayNumber < 1 || dayNumber > 7) {
             printf("Input out of range. Please enter a number between 1 and 7.\n");
             continue;
         }
 
-        // Use a switch-case statement to print the corresponding day of the week
+        // Using a switch-case statement to print the corresponding day of the week
         switch (dayNumber) {
-            case Sunday:
-                printf("Sunday\n");
-                break;
             case Monday:
                 printf("Monday\n");
                 break;
@@ -56,9 +53,8 @@ int main() {
             case Saturday:
                 printf("Saturday\n");
                 break;
-            default:
-                // This should not be reached, but added for completeness
-                printf("Unknown error occurred.\n");
+            case Sunday:
+                printf("Sunday\n");
                 break;
         }
 
