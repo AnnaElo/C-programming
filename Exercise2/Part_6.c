@@ -3,38 +3,64 @@
 // and ensure data integrity.
 
 #include <stdio.h>
+#include <stdbool.h>
 
 #define MAX_NAME_LENGTH 50
 
-// Defining student details
+// Define struct for student details
 struct Student {
     char name[MAX_NAME_LENGTH];
     int ID;
     float GPA;
 };
 
+// Function to input student's name
+void inputName(char *name, size_t size) {
+    printf("Enter student's name: ");
+    fgets(name, size, stdin);
+}
+
+// Function to input student's ID
+void inputID(int *ID) {
+    while (true) {
+        printf("Enter student's ID: ");
+        if (scanf("%d", ID) == 1) {
+            break; // Valid input
+        } else {
+            printf("Invalid input for ID. Please enter an integer.\n");
+            // Clear the input buffer
+            while (getchar() != '\n');
+        }
+    }
+}
+
+// Function to input student's GPA and validate it
+void inputGPA(float *GPA) {
+    while (true) {
+        printf("Enter student's GPA (0.0 - 4.0): ");
+        if (scanf("%f", GPA) == 1 && *GPA >= 0.0 && *GPA <= 4.0) {
+            break; // Valid input
+        } else {
+            printf("Invalid input for GPA. GPA must be a floating-point number within the range 0.0 - 4.0.\n");
+            // Clear the input buffer
+            while (getchar() != '\n');
+        }
+    }
+}
+
 int main() {
     struct Student student;
 
     // Input student's name
-    printf("Enter student's name: ");
-    fgets(student.name, sizeof(student.name), stdin);
+    inputName(student.name, sizeof(student.name));
 
     // Input student's ID
-    printf("Enter student's ID: ");
-    if (scanf("%d", &student.ID) != 1) {
-        printf("Invalid input for ID. Try again\n");
-        return 1;
-    }
+    inputID(&student.ID);
 
     // Input and validate student's GPA
-    printf("Enter student's GPA (0.0 - 4.0): ");
-    if (scanf("%f", &student.GPA) != 1 || student.GPA < 0.0 || student.GPA > 4.0) {
-        printf("Invalid input for GPA. GPA must be a floating-point number within the range 0.0 - 4.0.\n");
-        return 1;
-    }
+    inputGPA(&student.GPA);
 
-    // Displaying the inputs
+    // Display student details
     printf("\nStudent Details:\n");
     printf("Name: %s", student.name);
     printf("ID: %d\n", student.ID);
